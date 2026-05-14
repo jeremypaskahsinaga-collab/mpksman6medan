@@ -1,0 +1,229 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+
+  background:
+  linear-gradient(rgba(0,0,0,0.7),
+  rgba(0,0,0,0.7)),
+  url('assets/bg.jpg');
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+
+  color:white;
+}
+
+/* BUTTON */
+
+.platform-btn{
+
+  position:fixed;
+
+  top:20px;
+  right:20px;
+
+  border:none;
+
+  background:rgba(120,120,120,0.45);
+
+  color:white;
+
+  padding:16px 28px;
+
+  border-radius:25px;
+
+  font-size:20px;
+
+  backdrop-filter:blur(20px);
+
+  cursor:pointer;
+
+  z-index:2000;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+  position:fixed;
+
+  top:0;
+  right:-320px;
+
+  width:310px;
+  height:100vh;
+
+  background:rgba(90,90,90,0.55);
+
+  backdrop-filter:blur(25px);
+  -webkit-backdrop-filter:blur(25px);
+
+  border-left:1px solid rgba(255,255,255,0.1);
+
+  transition:0.5s ease;
+
+  padding-top:120px;
+
+  z-index:1500;
+}
+
+.sidebar.active{
+  right:0;
+}
+
+.sidebar a{
+
+  display:block;
+
+  color:white;
+  text-decoration:none;
+
+  padding:18px 35px;
+
+  font-size:22px;
+
+  transition:0.3s;
+}
+
+.sidebar a:hover{
+
+  background:rgba(255,255,255,0.2);
+
+  margin:0 15px;
+
+  border-radius:30px;
+}
+
+/* CONTENT */
+
+.content{
+  padding:30px;
+}
+
+/* TOPBAR */
+
+.topbar{
+  margin-bottom:20px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.logo img{
+
+  width:70px;
+  height:70px;
+
+  border-radius:50%;
+}
+
+.logo h1{
+  font-size:24px;
+}
+
+.logo p{
+  font-size:13px;
+  color:#ddd;
+}
+
+/* HERO */
+
+.hero{
+
+  overflow:hidden;
+
+  border-radius:10px;
+}
+
+.hero img{
+
+  width:100%;
+  height:500px;
+
+  object-fit:cover;
+}
+
+.hero-text{
+
+  background:rgba(0,0,0,0.75);
+
+  padding:30px;
+
+  text-align:center;
+}
+
+.hero-text h1{
+
+  font-size:42px;
+  font-weight:400;
+}
+
+/* CARD */
+
+.card{
+
+  background:white;
+  color:black;
+
+  padding:35px;
+
+  border-radius:5px;
+
+  margin-top:40px;
+}
+
+.card h2{
+
+  color:#1e2b6d;
+
+  font-size:60px;
+
+  margin-bottom:20px;
+}
+
+.card p,
+.card li{
+
+  font-size:20px;
+
+  line-height:1.7;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .platform-btn{
+
+    top:15px;
+    right:15px;
+
+    font-size:18px;
+  }
+
+  .sidebar{
+    width:100%;
+  }
+
+  .hero img{
+    height:250px;
+  }
+
+  .hero-text h1{
+    font-size:24px;
+  }
+
+  .card h2{
+    font-size:38px;
+  }
+
+}
