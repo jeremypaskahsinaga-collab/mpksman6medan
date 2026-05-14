@@ -1,0 +1,594 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    height:75px;
+
+    background:rgba(0,0,0,0.7);
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 20px;
+
+    z-index:999;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo{
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+}
+
+.logo-area h1{
+    font-size:14px;
+    font-weight:600;
+}
+
+.logo-area p{
+    font-size:9px;
+    opacity:0.7;
+}
+
+/* MENU */
+
+.menu-toggle{
+    background:#5b5b5b;
+
+    padding:10px 18px;
+
+    border-radius:18px;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    position:fixed;
+
+    top:0;
+    right:-300px;
+
+    width:280px;
+    height:100vh;
+
+    background:#575757;
+
+    padding-top:90px;
+
+    transition:0.4s;
+
+    z-index:1000;
+}
+
+.sidebar.active{
+    right:0;
+}
+
+.sidebar a{
+    display:block;
+
+    color:white;
+    text-decoration:none;
+
+    font-size:22px;
+
+    padding:15px 24px;
+
+    margin:10px;
+
+    border-radius:25px;
+}
+
+.sidebar a.active{
+    background:#a0949d;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    height:100vh;
+}
+
+.hero-img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    filter:brightness(55%);
+}
+
+/* KOMISI */
+
+.container{
+    padding:110px 30px 30px;
+}
+
+.komisi-wrapper{
+    display:flex;
+    gap:20px;
+}
+
+.komisi-kiri{
+    width:35%;
+
+    background:white;
+
+    color:black;
+
+    padding:20px;
+}
+
+.komisi-kiri h2{
+    font-size:60px;
+
+    color:#1d2558;
+}
+
+.komisi-kiri p{
+    font-size:22px;
+
+    margin-bottom:15px;
+}
+
+.foto-komisi{
+    width:100%;
+    height:450px;
+
+    object-fit:cover;
+}
+
+.komisi-kanan{
+    width:65%;
+
+    background:white;
+
+    color:black;
+
+    padding:30px;
+}
+
+.komisi-kanan p{
+    font-size:24px;
+
+    line-height:1.8;
+}
+
+.komisi-kanan h3{
+    margin-top:20px;
+
+    font-size:32px;
+
+    color:#1d2558;
+}
+
+.komisi-kanan ul{
+    padding-left:28px;
+
+    margin-top:15px;
+}
+
+.komisi-kanan li{
+    font-size:22px;
+
+    margin-bottom:10px;
+
+    line-height:1.7;
+}
+
+/* ========================= */
+/* PROGRAM KERJA */
+/* ========================= */
+
+.program-page{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:95px 25px 25px 25px;
+}
+
+.program-box{
+
+    width:100%;
+
+    max-width:1400px;
+
+    min-height:calc(100vh - 120px);
+
+    background:#f5f5f5;
+
+    padding:45px 55px;
+
+    border-radius:6px;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.25);
+
+    overflow:auto;
+}
+
+.program-box h2{
+
+  text-align:center;
+
+  color:#1d2b6b;
+
+  font-size:65px;
+
+  margin-bottom:30px;
+}
+
+.program-box p{
+
+  color:#111;
+
+  font-size:28px;
+
+  line-height:1.5;
+
+  margin-bottom:25px;
+}
+
+.program-box ul{
+
+  padding-left:35px;
+}
+
+.program-box li{
+
+  color:#111;
+
+  font-size:24px;
+
+  line-height:1.7;
+
+  margin-bottom:12px;
+}
+
+/* ========================= */
+/* GALERI & KONTAK */
+/* ========================= */
+
+.galeri-page,
+.kontak-page{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:95px 25px 25px 25px;
+}
+
+.galeri-box,
+.kontak-box{
+
+    width:100%;
+
+    max-width:1400px;
+
+    min-height:calc(100vh - 120px);
+
+    background:#f5f5f5;
+
+    border-radius:6px;
+
+    padding:35px;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.25);
+
+    overflow:auto;
+}
+
+/* ========================= */
+/* GALERI */
+/* ========================= */
+
+.galeri-box h2{
+
+    text-align:center;
+
+    font-size:60px;
+
+    color:#1d2b6b;
+
+    margin-bottom:30px;
+}
+
+.galeri-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+}
+
+.galeri-grid img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+}
+
+/* ========================= */
+/* KONTAK */
+/* ========================= */
+
+.kontak-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+    height:100%;
+}
+
+.kontak-kiri{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    border-right:4px solid #333;
+
+    padding:30px;
+}
+
+.kontak-logo{
+
+    width:130px;
+
+    margin-bottom:25px;
+}
+
+.kontak-kiri h3{
+
+    color:#1d2b6b;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+}
+
+.kontak-kiri p{
+
+    color:#111;
+
+    font-size:25px;
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+}
+
+.kontak-kiri a{
+
+    background:#1d2b6b;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 30px;
+
+    border-radius:10px;
+
+    font-size:22px;
+
+    transition:0.3s;
+}
+
+.kontak-kiri a:hover{
+
+    background:#111a47;
+}
+
+.kontak-kanan{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+}
+
+.kontak-item{
+
+    background:white;
+
+    border:2px solid #ddd;
+
+    border-radius:12px;
+
+    padding:25px;
+}
+
+.kontak-item h3{
+
+    color:#1d2b6b;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+}
+
+.kontak-item p{
+
+    color:#111;
+
+    font-size:24px;
+
+    line-height:1.5;
+}
+
+.kontak-item iframe{
+
+    width:100%;
+
+    height:240px;
+
+    border:none;
+
+    border-radius:10px;
+}
+
+.kontak-item a{
+
+    color:#1d2b6b;
+
+    font-size:26px;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    .kontak-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .kontak-kiri{
+
+        border-right:none;
+
+        border-bottom:4px solid #333;
+    }
+
+    .galeri-box h2{
+
+        font-size:42px;
+    }
+
+    .kontak-kiri h3,
+    .kontak-item h3{
+
+        font-size:28px;
+    }
+
+    .kontak-kiri p,
+    .kontak-item p{
+
+        font-size:18px;
+    }
+
+    .kontak-item a{
+
+        font-size:20px;
+    }
+
+}
+
+/* HOME TEXT */
+
+.home-text{
+    padding:60px 20px;
+
+    text-align:center;
+
+    background:#0f0f0f;
+
+    color:white;
+}
+
+.home-text h2{
+    font-size:30px;
+
+    font-weight:600;
+
+    line-height:1.4;
+}
+
+.home-text p{
+    font-size:22px;
+
+    opacity:0.8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .komisi-wrapper{
+        flex-direction:column;
+    }
+
+    .komisi-kiri,
+    .komisi-kanan{
+        width:100%;
+    }
+
+    .komisi-kiri h2{
+        font-size:42px;
+    }
+
+    .komisi-kanan p,
+    .komisi-kanan li{
+        font-size:18px;
+    }
+
+}
