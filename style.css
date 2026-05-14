@@ -1,0 +1,291 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0e0e0e;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    height:85px;
+
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 30px;
+
+    z-index:999;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+}
+
+.logo-area h1{
+    font-size:18px;
+}
+
+.logo-area p{
+    font-size:11px;
+    opacity:0.8;
+}
+
+/* MENU */
+
+.menu-toggle{
+    background:#5d5d5d;
+
+    padding:12px 24px;
+
+    border-radius:20px;
+
+    font-size:22px;
+
+    cursor:pointer;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    position:fixed;
+
+    top:0;
+    right:-320px;
+
+    width:300px;
+    height:100vh;
+
+    background:#595959;
+
+    padding-top:110px;
+
+    transition:0.4s;
+
+    z-index:1000;
+}
+
+.sidebar.active{
+    right:0;
+}
+
+.sidebar a{
+    display:block;
+
+    color:white;
+    text-decoration:none;
+
+    font-size:24px;
+
+    padding:16px 28px;
+
+    margin:10px 15px;
+
+    border-radius:30px;
+}
+
+.sidebar a.active{
+    background:#a0959d;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    height:100vh;
+}
+
+.hero-img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    filter:brightness(50%);
+}
+
+/* HOME TEXT */
+
+.home-text{
+    padding:60px 40px;
+}
+
+.home-text h2{
+    font-size:58px;
+    line-height:1.3;
+}
+
+.home-text p{
+    margin-top:10px;
+
+    font-size:22px;
+
+    opacity:0.8;
+}
+
+/* KOMISI */
+
+.container{
+    padding:120px 35px 40px;
+}
+
+.komisi-wrapper{
+    display:flex;
+    gap:20px;
+}
+
+.komisi-kiri{
+    width:35%;
+
+    background:white;
+
+    color:black;
+
+    padding:25px;
+}
+
+.komisi-kiri h2{
+    font-size:72px;
+
+    color:#1c275f;
+}
+
+.komisi-kiri p{
+    font-size:26px;
+
+    margin-bottom:20px;
+}
+
+.foto-komisi{
+    width:100%;
+    height:500px;
+
+    object-fit:cover;
+}
+
+.komisi-kanan{
+    width:65%;
+
+    background:white;
+
+    color:black;
+
+    padding:35px;
+}
+
+.komisi-kanan p{
+    font-size:28px;
+
+    line-height:1.8;
+}
+
+.komisi-kanan h3{
+    font-size:36px;
+
+    color:#1c275f;
+
+    margin-top:20px;
+}
+
+.komisi-kanan ul{
+    padding-left:30px;
+
+    margin-top:15px;
+}
+
+.komisi-kanan li{
+    font-size:24px;
+
+    margin-bottom:12px;
+
+    line-height:1.7;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:0 15px;
+    }
+
+    .logo{
+        width:45px;
+        height:45px;
+    }
+
+    .logo-area h1{
+        font-size:13px;
+    }
+
+    .logo-area p{
+        display:none;
+    }
+
+    .menu-toggle{
+        font-size:18px;
+        padding:10px 15px;
+    }
+
+    .hero{
+        height:70vh;
+    }
+
+    .home-text{
+        padding:40px 20px;
+    }
+
+    .home-text h2{
+        font-size:30px;
+    }
+
+    .home-text p{
+        font-size:16px;
+    }
+
+    .komisi-wrapper{
+        flex-direction:column;
+    }
+
+    .komisi-kiri,
+    .komisi-kanan{
+        width:100%;
+    }
+
+    .komisi-kiri h2{
+        font-size:48px;
+    }
+
+    .komisi-kiri p{
+        font-size:18px;
+    }
+
+    .komisi-kanan p,
+    .komisi-kanan li{
+        font-size:18px;
+    }
+
+}
