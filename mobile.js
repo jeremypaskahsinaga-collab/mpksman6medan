@@ -9,11 +9,20 @@ function closeMenu(){
 }
 
 function goToSection(id){
+  const target = document.getElementById(id);
+
   closeMenu();
-  setTimeout(function(){
-    document.getElementById(id).scrollIntoView({
-      behavior:"smooth",
-      block:"start"
-    });
-  },250);
+
+  if(target){
+    setTimeout(() => {
+      const navbarHeight = 80;
+      const targetPosition =
+        target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
+    }, 300);
+  }
 }
