@@ -1,11 +1,38 @@
+let selectedMode = "mobile";
 
-setTimeout(()=>{
-document.getElementById('s1').classList.remove('active');
-document.getElementById('s2').classList.add('active');
-},2200);
-function next(){
-document.body.innerHTML='<div style="display:flex;height:100vh;justify-content:center;align-items:center;background:#111;color:#fff;font-family:Arial"><div><h2>Mengoptimalkan tampilan...</h2></div></div>';
-setTimeout(() => {
-  window.location.href = "home.html";
-}, 1600);
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    showScreen("chooseScreen");
+  }, 1800);
+});
+
+function showScreen(id){
+  document.querySelectorAll(".screen").forEach(screen => {
+    screen.classList.remove("active");
+  });
+
+  document.getElementById(id).classList.add("active");
+}
+
+function selectMode(mode){
+  selectedMode = mode;
+
+  document.querySelectorAll(".choice").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  document.querySelector(`.choice[data-mode="${mode}"]`).classList.add("active");
+}
+
+function continueWebsite(){
+  showScreen("loadingScreen");
+
+  document.getElementById("loadingText").textContent =
+    selectedMode === "desktop"
+      ? "Mengalihkan ke tampilan desktop..."
+      : "Mengalihkan ke tampilan mobile...";
+
+  setTimeout(() => {
+    window.location.href = "home.html";
+  }, 1600);
 }
