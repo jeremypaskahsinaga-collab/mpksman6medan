@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MPK SMAN 6 MEDAN - Mobile</title>
+  <link rel="stylesheet" href="mobile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="m-navbar">
+  <div class="m-brand">
+    <img src="assets/logo.png" alt="Logo MPK">
+    <div>
+      <h1>MPK SMAN 6 MEDAN</h1>
+      <p>Pelopor Resmi Pengaduan Siswa</p>
+    </div>
+  </div>
+  <button class="m-menu-btn" onclick="openMenu()">☰</button>
+</header>
+
+<nav class="m-drawer" id="mobileMenu">
+  <div class="m-drawer-top">
+    <div class="m-brand">
+      <img src="assets/logo.png" alt="Logo MPK">
+      <div>
+        <h1>MPK SMAN 6 MEDAN</h1>
+        <p>Mobile Navigation</p>
+      </div>
+    </div>
+    <button class="m-close-btn" onclick="closeMenu()">×</button>
+  </div>
+
+  <a onclick="goToSection('home')">🏠 Beranda</a>
+  <a onclick="goToSection('komisi')">✦ Komisi</a>
+  <a onclick="goToSection('program')">🛠️ Program Kerja</a>
+  <a onclick="goToSection('galeri')">🖼️ Galeri</a>
+  <a onclick="goToSection('kontak')">☎️ Kontak</a>
+  <a href="home.html">🖥️ Versi Desktop</a>
+</nav>
+
+<section class="m-hero" id="home">
+  <img src="assets/hero.jpg" alt="Hero MPK">
+  <div class="m-hero-text">
+    <span>WEBSITE RESMI</span>
+    <h2>MPK SMA NEGERI 6 MEDAN</h2>
+    <p>Suara Siswa, Aspirasi Kita, Perubahan Nyata.</p>
+    <button onclick="goToSection('kontak')">Sampaikan Aspirasi</button>
+  </div>
+</section>
+
+<section class="m-welcome">
+  <h2>SELAMAT DATANG</h2>
+  <p>
+    Website resmi MPK SMAN 6 Medan sebagai sarana informasi, aspirasi,
+    dan pengaduan siswa.
+  </p>
+</section>
+
+<section class="m-section" id="komisi">
+  <h2 class="m-title">KOMISI MPK</h2>
+
+  <article class="m-card">
+    <img src="assets/komisia.jpg" alt="Komisi A">
+    <div class="m-card-body">
+      <h3>KOMISI A</h3>
+      <p class="m-sub">Menangani Peraturan & AD/ART</p>
+      <ul>
+        <li>Mengaktifkan akun Instagram MPK sebagai media informasi dan publikasi.</li>
+        <li>Mengarsipkan dokumen, berkas, dan laporan secara sistematis.</li>
+        <li>Mengembangkan website MPK sebagai sarana informasi, transparansi, dan pengaduan.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="m-card">
+    <img src="assets/komisib.jpg" alt="Komisi B">
+    <div class="m-card-body">
+      <h3>KOMISI B</h3>
+      <p class="m-sub">Mengawasi Ekstrakurikuler</p>
+      <ul>
+        <li>Bekerja sama dengan OSIS dalam mengawasi kegiatan ekstrakurikuler.</li>
+        <li>Menjadi tempat bernaung apabila terjadi permasalahan ekstrakurikuler.</li>
+        <li>Membekukan dan mengesahkan ekstrakurikuler sesuai hasil rapat.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="m-card">
+    <img src="assets/komisic.jpg" alt="Komisi C">
+    <div class="m-card-body">
+      <h3>KOMISI C</h3>
+      <p class="m-sub">Mengawasi OSIS</p>
+      <ul>
+        <li>Menyusun buku catatan evaluasi kegiatan OSIS.</li>
+        <li>Melaksanakan evaluasi kinerja OSIS secara berkala.</li>
+        <li>Menghimpun penilaian siswa terhadap OSIS melalui Google Form.</li>
+        <li>Menghadiri rapat OSIS sebagai bentuk pengawasan.</li>
+        <li>Menyusun laporan kinerja OSIS selama satu periode.</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<section class="m-section" id="program">
+  <h2 class="m-title">PROGRAM KERJA</h2>
+
+  <div class="m-program">
+    <div class="m-program-item"><span>📢</span><div><h3>Angket Aspirasi Kelas</h3><p>Menampung aspirasi siswa secara digital dan berkala.</p></div></div>
+    <div class="m-program-item"><span>📄</span><div><h3>Laporan Tindak Lanjut</h3><p>Menyampaikan tindak lanjut aspirasi dengan lebih transparan.</p></div></div>
+    <div class="m-program-item"><span>🤝</span><div><h3>Forum Koordinasi</h3><p>Koordinasi MPK, OSIS, dan ekstrakurikuler.</p></div></div>
+    <div class="m-program-item"><span>✅</span><div><h3>Evaluasi Kegiatan</h3><p>Melakukan evaluasi terhadap kegiatan OSIS dan MPK.</p></div></div>
+    <div class="m-program-item"><span>💬</span><div><h3>MPK Mendengar</h3><p>Forum untuk mendengar masukan dari siswa dan perwakilan kelas.</p></div></div>
+  </div>
+</section>
+
+<section class="m-section" id="galeri">
+  <h2 class="m-title">GALERI MPK</h2>
+  <div class="m-gallery">
+    <img src="assets/galeri1.jpg" alt="Galeri 1">
+    <img src="assets/galeri2.jpg" alt="Galeri 2">
+    <img src="assets/galeri3.jpg" alt="Galeri 3">
+    <img src="assets/galeri4.jpg" alt="Galeri 4">
+    <img src="assets/galeri5.jpg" alt="Galeri 5">
+    <img src="assets/galeri6.jpg" alt="Galeri 6">
+  </div>
+</section>
+
+<section class="m-section" id="kontak">
+  <h2 class="m-title">KONTAK MPK</h2>
+
+  <div class="m-contact-main">
+    <img src="assets/logo.png" alt="Logo MPK">
+    <h3>FORM PENGADUAN</h3>
+    <p>Isi form pengaduan resmi MPK SMAN 6 Medan.</p>
+    <a href="https://forms.gle/xxxxxxxx" target="_blank">Isi Form</a>
+  </div>
+
+  <div class="m-contact-box">
+    <h3>📍 Alamat</h3>
+    <p>SMA Negeri 6 Medan<br>Jl. Ansari No.34, Medan, Sumatera Utara</p>
+  </div>
+
+  <div class="m-contact-box">
+    <h3>🗺️ Google Maps</h3>
+    <iframe src="https://www.google.com/maps?q=SMAN+6+Medan&output=embed"></iframe>
+  </div>
+
+  <div class="m-contact-box">
+    <h3>📷 Instagram</h3>
+    <a class="m-link" href="https://instagram.com/mpksman6medan" target="_blank">@mpksman6medan</a>
+  </div>
+</section>
+
+<footer class="m-footer">
+  <h3>MPK SMAN 6 MEDAN</h3>
+  <p>Suara Siswa, Aspirasi Kita, Perubahan Nyata.</p>
+</footer>
+
+<script src="mobile.js"></script>
+</body>
+</html>
