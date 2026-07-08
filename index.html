@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MPK SMAN 6 Medan</title>
-<link rel="stylesheet" href="intro.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MPK SMAN 6 MEDAN</title>
+  <link rel="stylesheet" href="intro.css">
 </head>
 <body>
-<div class="screen active" id="s1">
-<img src="assets/logo.png" class="logo">
-<h1>MPK SMA NEGERI 6 MEDAN</h1>
-<p>Suara Siswa, Aspirasi Kita, Perubahan Nyata.</p>
-<div class="bar"><span></span></div>
-</div>
 
-<div class="screen" id="s2">
-<h2>Perangkat Anda terdeteksi</h2>
-<div class="card">
-📱 <b>Mobile</b><br><br>
-<button onclick="next()">Lanjutkan</button>
-<hr>
-<a href="index.html">Gunakan Desktop Version</a>
-</div>
-</div>
+  <main class="intro">
 
-<script src="intro.js"></script>
+    <section class="screen active" id="splashScreen">
+      <img src="assets/logo.png" class="intro-logo" alt="Logo MPK">
+      <h1>MPK</h1>
+      <h2>SMA NEGERI 6 MEDAN</h2>
+      <div class="line"></div>
+      <p>"Suara Siswa, Aspirasi Kita,<br>Perubahan Nyata."</p>
+      <div class="loading-bar"><span></span></div>
+      <small>Memuat website...</small>
+    </section>
+
+    <section class="screen" id="chooseScreen">
+      <img src="assets/logo.png" class="small-logo" alt="Logo MPK">
+      <h2>Pilih Tampilan Website</h2>
+      <p class="desc">Silakan pilih tampilan yang ingin digunakan.</p>
+
+      <div class="choice-wrap">
+        <button class="choice active" data-mode="mobile" onclick="selectMode('mobile')">
+          <span>📱</span>
+          <b>Mobile</b>
+        </button>
+
+        <button class="choice" data-mode="desktop" onclick="selectMode('desktop')">
+          <span>🖥️</span>
+          <b>Desktop</b>
+        </button>
+      </div>
+
+      <button class="continue-btn" onclick="continueWebsite()">
+        Lanjutkan →
+      </button>
+    </section>
+
+    <section class="screen" id="loadingScreen">
+      <div class="circle">⚙️</div>
+      <h2>Mengoptimalkan tampilan...</h2>
+      <p id="loadingText">Mohon tunggu sebentar.</p>
+      <div class="loading-bar wide"><span></span></div>
+    </section>
+
+  </main>
+
+  <script src="intro.js"></script>
 </body>
 </html>
+
