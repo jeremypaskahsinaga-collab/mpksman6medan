@@ -33,6 +33,10 @@ function continueWebsite(){
       : "Mengalihkan ke tampilan mobile...";
 
   setTimeout(() => {
-    window.location.href = "home.html";
+    if(selectedMode === "mobile"){
+      window.location.href = "home-mobile.html";
+    }else{
+      window.location.href = "home.html";
+    }
   }, 1600);
 }
