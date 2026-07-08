@@ -1,0 +1,10 @@
+
+body{margin:0;background:#111;color:#fff;font-family:Arial,sans-serif}
+.screen{display:none;height:100vh;align-items:center;justify-content:center;flex-direction:column}
+.active{display:flex}
+.logo{width:100px}
+.bar{width:220px;height:8px;background:#333;border-radius:10px;overflow:hidden}
+.bar span{display:block;width:70%;height:100%;background:#f6b21a;animation:load 2s}
+.card{background:#1f1f1f;padding:30px;border-radius:18px;text-align:center}
+button{padding:12px 24px;border:0;border-radius:10px;background:#f6b21a;font-weight:bold}
+@keyframes load{from{width:0}to{width:100%}}
